@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import ContactContext from "../../context/contact/contactContext";
-import { CLEAR_CURRENT } from "../../context/type";
 
 const ContactItem = ({ contact }) => {
   const contactContext = useContext(ContactContext);

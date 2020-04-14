@@ -49,6 +49,7 @@ const Login = props => {
         <div className="form-group">
           <label htmlFor="email">Email Address</label>
           <input
+            id="email"
             type="email"
             name="email"
             value={email}
@@ -59,6 +60,7 @@ const Login = props => {
         <div className="form-group">
           <label htmlFor="password">Password</label>
           <input
+          id="password"
             type="password"
             name="password"
             value={password}
