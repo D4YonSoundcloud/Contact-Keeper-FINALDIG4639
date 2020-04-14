@@ -29,6 +29,38 @@ export default (state, action) => {
         user: null,
         error: action.payload
       };
+    case LOGIN_SUCCESS:
+      localStorage.setItem("token", action.payload.token);
+      return {
+        ...state,
+        token: action.payload.token,
+        isAuthenticated: true,
+        loading: false
+      };
+    case LOGIN_FAIL:
+    case LOGOUT:
+      localStorage.removeItem("token");
+      return {
+        ...state,
+        token: null,
+        isAuthenticated: false,
+        user: null,
+        loading: false
+      };
+    case CLEAR_ERRORS:
+      return {
+        ...state,
+        errror: null
+      };
+    case USER_LOADED:
+      return {
+        ...state,
+        isAuthenticated: true,
+        loading: false,
+        user: action.payload
+      };
+    case AUTH_ERROR:
+      return {};
     default:
       return state;
   }
