@@ -2,13 +2,13 @@ import React, { Fragment, useContext, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth/authContext";
-import ContactContext from '../../context/contact/contactContext';
+import ContactContext from "../../context/contact/contactContext";
 
 const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
-
+  const contactContext = useContext(ContactContext);
   const { isAuthenticated, logout, user, loadUser } = authContext;
-
+  const { clearContacts } = contactContext;
   useEffect(() => {
     loadUser();
     // eslint-disable-next-line
@@ -17,6 +17,7 @@ const Navbar = ({ title, icon }) => {
   const onLogout = () => {
     logout();
     console.log("works");
+    clearContacts();
   };
 
   const authLinks = (
@@ -47,7 +48,7 @@ const Navbar = ({ title, icon }) => {
   return (
     <div className="navbar bg-primary">
       <h1>
-      <Link to='/'>
+        <Link to="/">
           <i className={icon} /> {title}
         </Link>
       </h1>
