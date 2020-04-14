@@ -53,7 +53,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <h2 className="text-primary">
+      <h2 className="text-primary-big">
         {current ? "Edit Contact" : "Add Contact"}
       </h2>
       <input

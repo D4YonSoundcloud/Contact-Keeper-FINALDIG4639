@@ -18,7 +18,7 @@ const Home = () => {
       </div>
       <div>
         <ContactFilter></ContactFilter>
-        <Contacts></Contacts>
+        <Contacts className="container-contacts"></Contacts>
       </div>
     </div>
   );

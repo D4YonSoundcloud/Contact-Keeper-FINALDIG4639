@@ -5,8 +5,14 @@ export default () => (
   <Fragment>
     <img
       src={spinner}
-      style={{ width: "200px", margin: "auto", disaplay: "block" }}
+      style={{
+        width: "50px",
+        height: "50px",
+        margin: "auto",
+        disaplay: "block"
+      }}
       alt="loading..."
     />
+    <h5>If this appears for more than 2 seconds, please refresh</h5>
   </Fragment>
 );
