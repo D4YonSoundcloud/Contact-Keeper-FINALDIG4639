@@ -38,14 +38,25 @@ export default (state, action) => {
         loading: false
       };
     case LOGIN_FAIL:
-    case LOGOUT:
       localStorage.removeItem("token");
       return {
         ...state,
         token: null,
         isAuthenticated: false,
+        loading: false,
         user: null,
-        loading: false
+        error: action.payload
+      };
+    case LOGOUT:
+      localStorage.removeItem("token");
+      console.log("works");
+      return {
+        ...state,
+        token: null,
+        isAuthenticated: false,
+        loading: false,
+        user: null,
+        error: action.payload
       };
     case CLEAR_ERRORS:
       return {
