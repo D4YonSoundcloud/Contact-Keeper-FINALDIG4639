@@ -5,6 +5,12 @@
 (free hosting so it might take a while to load)
 
 ### __[APP AND CODE WALKTHROUGH VIDEO W/ DEV COMMENTARY](https://www.youtube.com/watch?v=874luw7ZoAw)__
+*APP WALKTHROUGH START - 7:55*
+
+*BACKEND WALKTHROUGH 7:55 - 40:00*
+
+*FRONTEND WALKTHROUGH 40:00 - END*
+
 
 ---
 
@@ -48,13 +54,13 @@ ___
 * __FRONT-END__
   * REACT-ROUTER-DOM
   * AXIOS
-  * 
+  * REACT-TRANSITION-GROUP
 ```bash
     npx create-react-app client
 
     cd client
 
-    npm i react-router-dom axios
+    npm i react-router-dom axios react-transition-group
 ```
 
 # DEVELOPER NOTES / THOUGHTS ON REACT IN 2020
