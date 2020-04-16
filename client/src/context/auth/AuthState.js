@@ -56,7 +56,6 @@ const AuthState = props => {
       const url = "/api/users";
       const res = await axios.post(url, formData, config);
 
-      //dispatches to users.js on the backend
       dispatch({
         type: REGISTER_SUCCESS,
         payload: res.data
@@ -81,7 +80,6 @@ const AuthState = props => {
       const url = "/api/auth";
       const res = await axios.post(url, formData, config);
 
-      //dispatches to users.js on the backend
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data
